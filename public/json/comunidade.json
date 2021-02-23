@@ -1,0 +1,92 @@
+[
+    {
+       "id":1,
+       "firstName":"Manuel Borges",
+       "username":"manuelb",
+       "password":"202cb962ac59075b964b07152d234b70",
+       "localidade":"Lisboa",
+       "preco":"17/HR €",
+       "especialidade":"Desinfeção"
+    },
+    {
+       "id":2,
+       "firstName":"Rui Miguel",
+       "username":"ruim",
+       "password":"202cb962ac59075b964b07152d234b70",
+       "localidade":"Almada",
+       "preco":"10/HR €",
+       "especialidade":"Desinfeção COVID-19"
+    },
+    {
+       "id":3,
+       "firstName":"Dinis Manel",
+       "username":"dmanuel",
+       "password":"202cb962ac59075b964b07152d234b70",
+       "localidade":"Seixal",
+       "preco":"8/HR €",
+       "especialidade":"Desinfeção COVID-19"
+    },
+    {
+       "id":4,
+       "firstName":"Duarte Jota",
+       "username":"jota123",
+       "password":"202cb962ac59075b964b07152d234b70",
+       "localidade":"Lisboa",
+       "preco":"11/HR €",
+       "especialidade":"Desinfeção"
+    },
+    {
+       "id":5,
+       "firstName":"André Henriques",
+       "username":"ah1998",
+       "password":"202cb962ac59075b964b07152d234b70",
+       "localidade":"Almada",
+       "preco":"10/HR €",
+       "especialidade":"Aplicação Adubo"
+    },
+    {
+       "id":6,
+       "firstName":"Cristina Oliveira",
+       "username":"cris.oliveira12",
+       "password":"202cb962ac59075b964b07152d234b70",
+       "localidade":"Linda-Velha",
+       "preco":"10/HR €",
+       "especialidade":"Desinfeção COVID-19"
+    },
+    {
+       "id":7,
+       "firstName":"Miguel Abraço",
+       "username":"abraco123",
+       "password":"202cb962ac59075b964b07152d234b70",
+       "localidade":"Oeiras",
+       "preco":"15/HR €",
+       "especialidade":"Aplicação Fertilizante"
+    },
+    {
+       "id":8,
+       "firstName":"Steve Kapa",
+       "username":"steve123421",
+       "password":"202cb962ac59075b964b07152d234b70",
+       "localidade":"Lisboa",
+       "preco":"12/HR €",
+       "especialidade":"Aplicação Adubo"
+    },
+    {
+       "id":9,
+       "firstName":"Joana Borges",
+       "username":"joanaborges",
+       "password":"202cb962ac59075b964b07152d234b70",
+       "localidade":"Oeiras",
+       "preco":"10/HR €",
+       "especialidade":"Desinfeção"
+    },
+    {
+       "id":10,
+       "firstName":"João Gira",
+       "username":"joaogira1",
+       "password":"202cb962ac59075b964b07152d234b70",
+       "localidade":"Lisboa",
+       "preco":"5/HR €",
+       "especialidade":"Aplicação Adubo"
+    }
+ ]

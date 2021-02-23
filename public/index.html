@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>PharmHelper</title>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="js/extras/chabot.js"></script>
+    <script src="/js/search/searchScript.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Quicksand&display=swap'>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <link rel="stylesheet" href="/stylesheets/aboutus.css">
+    <link rel="stylesheet" href="/stylesheets/autocomplete.css">
+    <link rel="icon" href="/images/logo/bar.png" type="image/png" style="width: 10px; height: 15px;">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+          integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+
+    <!--<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tarekraafat/autocomplete.js@8.3.0/dist/css/autoComplete.min.css">-->
+    <script src="https://cdn.jsdelivr.net/npm/@tarekraafat/autocomplete.js@8.3.0/dist/js/autoComplete.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tarekraafat-autocomplete.js/8.3.0/js/autoComplete.min.js"></script>
+
+
+</head>
+
+
+<header>
+    <!--- Navbar --->
+    <nav class="navbar navbar-expand-lg fixed-top ">
+        <div class="container">
+            <a class="navbar-brand text-white" href="index.html"><img src="images/logo/bar.png" style="height : 20px">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nvbCollapse"
+                    aria-controls="nvbCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse " id="nvbCollapse">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item pl-1">
+                        <a class="nav-link" href="index.html"><i class="fa fa-home fa-fw mr-1"></i>Início</a>
+                    </li>
+                    <li class="nav-item pl-1">
+                        <a class="nav-link" href="views/extras/sobrenos.html"><i class="fa fa-th-list fa-fw mr-1"></i>Sobre
+                            Nós</a>
+                    </li>
+                    <div class='dropdown menu'>
+                        <li class="nav-item pl-1">
+                            <a class="nav-link" href="views/produtos/produto.html"><i
+                                    class="fa fa-info-circle fa-fw mr-1"></i>Produto</a>
+                    </div>
+                    </li>
+                    <li class="nav-item pl-1">
+                        <a class="nav-link" href="views/servicos/servico.html"><i
+                                class="fa fa-phone fa-fw fa-rotate-180 mr-1"></i>Serviço</a>
+                    </li>
+                    <li class="nav-item pl-1">
+                        <a class="nav-link" href="views/extras/comunidade.html"><i
+                                class="fa fa-user-plus fa-fw mr-1"></i>Comunidade</a>
+                    </li>
+                    <li class="nav-item pl-1">
+                        <a class="nav-link" href="views/forms/registar.html"><i
+                                class="fas fa-address-card fa-fw mr-1"></i>Registo</a>
+                    </li>
+                    <li class="nav-item pl-1">
+                        <a class="nav-link" href="views/loja/shop.html"><i class="fas fa-shopping-cart"></i>Shop</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!--# Navbar #-->
+</header>
+<section class="background-img" style="background-image: url(images/extras/intro_bg.png);">
+    <section class="search-sec">
+        <div class="block-title text-center" data-v-854d2e4c="">
+            <p data-v-854d2e4c="" style="color: #fff">
+                A Farmácia Online <br>
+                que entrega onde estiver
+            </p>
+            
+        </div>
+        <div class="container">
+            <form action="" autocomplete="off" method="get" novalidate="novalidate">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="row">
+                            <div class="col-lg-3 col-md-3 col-sm-12 p-0">
+                                <input type="text" class="form-control search-slt" id="nome" placeholder="Nome Completo"
+                                       required>
+                            </div>
+
+                            <div class="col-lg-3 col-md-3 col-sm-12 p-0">
+                                <input type="text" class="form-control search-slt" id="autoComplete"
+                                       placeholder="Cidade: " required>
+                                <div class="selection" hidden></div>
+                            </div>
+
+                            <div class="col-lg-3 col-md-3 col-sm-12 p-0">
+                                <input type="date" class="form-control search-slt" id="data" dateplaceholder="Data">
+                            </div>
+                            <div class="col-lg-3 col-md-3 col-sm-12 p-0">
+                                <div id="listarServicos"></div>
+                            </div>
+                            <div class="p-0 btn-lg btn-block ">
+                                <button type="button" onclick="searchLocalidade()" id="searchMain"
+                                        class="btn wrn-btn" style="background-color: #5b6b8b;">Pesquisar
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
+</section>
+<section class="about_one " data-v-854d2e4c="">
+    <div class="container" data-v-854d2e4c="">
+        <div class="row" data-v-854d2e4c="">
+            <div class="col-xl-6 col-lg-6" data-v-854d2e4c="">
+                <div class="about1_img" data-v-854d2e4c="">
+                    <div class="about1_shape_1" data-v-854d2e4c="">
+                    </div>
+                    <img src="images/extras/about-1-img-1.jpg" alt="About-Img" data-v-854d2e4c="">
+                    <div class="about1_icon-box" data-v-854d2e4c="">
+                        <div class="circle" data-v-854d2e4c="">
+                            <img src="images/logo/bar.png" style="height: 115px;
+          width: 115px;">
+                            </span>
+                        </div>
+                    </div>
+                    <div class="about_img_2" data-v-854d2e4c="">
+                        <img src="images/extras/about-1-img-2.jpg" alt="" data-v-854d2e4c="">
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-6 col-lg-6" data-v-854d2e4c="">
+                <div class="block-title text-left" data-v-854d2e4c="">
+                    <p data-v-854d2e4c="" style="color: #5f8f55">Sobre a AgriArea</p>
+                    <h3 data-v-854d2e4c="">Lideres no mercado Farmacêutico</h3>
+                </div>
+                <div class="about_content" data-v-854d2e4c="">
+                    <div class="text" data-v-854d2e4c="">
+                        <p data-v-854d2e4c="">There are many variations of passages of Lorem Ipsum available, but the
+                            majority have
+                            suffered alteration in some form, by injected humour, or randomised words which
+                            don't look even slightly believable.</p>
+                    </div>
+                    <div class="about1_icon_wrap" data-v-854d2e4c="">
+                        <div class="about1_icon_single" data-v-854d2e4c="">
+                            <div class="about1_icon" data-v-854d2e4c="">
+
+                                <img src="images/extras/harvest.png" id="harvest" style="height: 50px;">
+                            </div>
+                            <p data-v-854d2e4c="">Growing Fruits and Vegetables</p>
+                        </div>
+                        <div class="about1_icon_single" data-v-854d2e4c="">
+                            <div class="about1_icon" data-v-854d2e4c="">
+                                <img src="images/extras/harvest1.png" id="harvest" style="height: 50px;">
+                            </div>
+                            <p data-v-854d2e4c="">Tips for Ripening your Fruits</p>
+                        </div>
+                    </div>
+                    <div class="bottom_text" data-v-854d2e4c="">
+                        <p data-v-854d2e4c=""> If you are going to use a passage of Lorem Ipsum, you need to be sure
+                            there isn't
+                            anything embarrassing hidden in the middle of text.</p>
+                    </div>
+                    <div class="about1__button-block" data-v-854d2e4c="">
+                        <a class="aboutus-more " href="views/extras/sobrenos.html" style="color:#592c18"><b>Mais
+                            Informações</b>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="service_one" data-v-9daeda22="">
+    <div class="container" data-v-9daeda22="">
+        <div class="block-title text-center" data-v-9daeda22="">
+            <p data-v-9daeda22="">What we do</p>
+            <h3 data-v-9daeda22="">Products We Offer</h3>
+        </div>
+        <div class="row" data-v-9daeda22="">
+            <div class="col-xl-3 col-lg-3 col-md-6" data-v-9daeda22="">
+                <div class="service_1_single wow fadeInUp" data-v-9daeda22="">
+                    <div class="content" data-v-9daeda22="">
+                        <h3 data-v-9daeda22="">Saúde</h3>
+                        <p data-v-9daeda22="">Soluções sólidas especialmente concebidas para potenciar e proteger os
+                            nutrientes das culturas.</p>
+                    </div>
+                    <div class="service_1_img" data-v-9daeda22="">
+                        <img src="images/servicos/fertilizanteSolido.png" alt="Service Image" data-v-9daeda22="">
+                            <div class="hover_box" data-v-9daeda22="">
+                                <a href="/service-detail" data-v-9daeda22="" class="">
+                <span class="icon-left-arrow" data-v-9daeda22="">
+                </span>
+                                </a>
+                            </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-3 col-md-6" data-v-9daeda22="">
+                <div data-wow-delay="300ms" class="service_1_single wow fadeInUp" data-v-9daeda22="">
+                    <div class="content" data-v-9daeda22="">
+                        <h3 data-v-9daeda22="">Beleza</h3>
+                        <p data-v-9daeda22="">Produtos altamente solúveis adaptados e projectados para responder às
+                            necessidades nutricionais das culturas através das instalações de fertirrega.
+                        </p>
+                    </div>
+                    <div class="service_1_img" data-v-9daeda22="">
+                        <img src="images/servicos/regando-plantas.png" alt="Service Image" data-v-9daeda22="">
+                        <div class="hover_box" data-v-9daeda22="">
+                            <a href="/service-detail" data-v-9daeda22="" class="">
+                  <span class="icon-left-arrow" data-v-9daeda22="">
+                  </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-3 col-md-6" data-v-9daeda22="">
+                <div data-wow-delay="600ms" class="service_1_single wow fadeInUp" data-v-9daeda22="">
+                    <div class="content" data-v-9daeda22="">
+                        <h3 data-v-9daeda22="">Suplementos</h3>
+                        <p data-v-9daeda22="">Soluções liquidas foliares especialmente concebidas para responder às
+                            necessidades nutricionais mais específicas
+                            das culturas.</p>
+                    </div>
+                    <div class="service_1_img" data-v-9daeda22="">
+                        <img src="images/servicos/crescer-planta.png" alt="Service Image" data-v-9daeda22="">
+                        <div class="hover_box" data-v-9daeda22="">
+                            <a href="/service-detail" data-v-9daeda22="" class="">
+                      <span class="icon-left-arrow" data-v-9daeda22="">
+                      </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-3 col-md-6" data-v-9daeda22="">
+                <div data-wow-delay="900ms" class="service_1_single wow fadeInUp" data-v-9daeda22="">
+                    <div class="content" data-v-9daeda22="">
+                        <h3 data-v-9daeda22="">Mamã &
+                            <br data-v-9daeda22="">Bebé</h3>
+                        <p data-v-9daeda22="">Uma ampla gama de soluções químicas sólidas e líquidas adaptadas a
+                            necessidades específicas de natureza muito diferentes.</p>
+                    </div>
+                    <div class="service_1_img" data-v-9daeda22="">
+                        <img src="images/servicos/factory.png" alt="Service Image" data-v-9daeda22="">
+                        <div class="hover_box" data-v-9daeda22="">
+                            <a href="/service-detail" data-v-9daeda22="" class="">
+                      <span class="icon-left-arrow" data-v-9daeda22="">
+                      </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<div id="body">
+    <div id="chat-circle" class="btn btn-raised">
+        <div id="chat-overlay"></div>
+        <p class="material-icons"><b>Chat</b></p>
+    </div>
+
+    <div class="chat-box">
+        <div class="chat-box-header">
+            <b>Chat</b>
+            <span class="chat-box-toggle"><p class="material-icons">x</p></span>
+        </div>
+        <div class="chat-box-body">
+            <div class="chat-box-overlay">
+            </div>
+            <div class="chat-logs">
+
+            </div><!--chat-log -->
+        </div>
+        <div class="chat-input">
+            <form>
+                <input type="text" id="chat-input" placeholder="Digite Aqui ..."/>
+                <button type="submit" class="chat-submit" id="chat-submit"><p class="material-icons"><b>Enviar</b></p>
+                </button>
+            </form>
+        </div>
+    </div>
+    </body>
+    <footer>
+        <div class="jumbotron jumbotron-fluid bg-secondary p-4 mt-5 mb-0">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 cizgi">
+                        <div class="card bg-secondary border-0">
+                            <div class="card-body text-light text-center">
+                                <h5 class="card-title text-white display-4" style="font-size:30px">AgriArea</h5>
+                                <p class="d-inline lead">AgriArea © 2020<br>
+                                    <a href="#" class="text-light d-block lead">Site</a>
+                                </p>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 cizgi">
+                        <div class="card bg-secondary border-0">
+                            <div class="card-body text-center">
+                                <h5 class="card-title text-white display-4" style="font-size:30px"></h5>
+                                <a class="text-light d-block lead" style="margin-left: -20px" href="#"><i
+                                        class="fa fa-phone mr-2"></i>+351 000000000</a>
+                                <a class="text-light d-block lead" href="agriarea@gmail.com"><i
+                                        class="fa fa-envelope mr-2"></i>agriarea@gmail.com</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4">
+                        <div class="card bg-secondary border-0">
+                            <div class="card-body text-center">
+                                <h5 class="card-title text-white display-4" style="font-size:30px"></h5>
+
+                                <a class="text-light" href="#"><i class="fa fa-facebook-square fa-fw fa-2x"></i></a>
+
+                                <a class="text-light" href="#"><i class="fa fa-twitter-square fa-fw fa-2x"></i></a>
+
+                                <a class="text-light" href="#"><i class="fa fa-instagram fa-fw fa-2x"></i></a>
+
+                                <a class="text-light" href="#"><i class="fa fa-linkedin fa-fw fa-2x"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+</html>

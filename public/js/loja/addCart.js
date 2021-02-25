@@ -104,15 +104,15 @@
 
             let product = "";
 
-            if (event === "20,50€") {
+            if (event === "20.50") {
 
                 product = $('#productOleo').text().replace(/ /g, '').replace(/['"]+/g, '').replace(/(\r\n|\n|\r)/gm, "");
 
-            } else if (event === "9,00€") {
+            } else if (event === "9.00") {
 
                 product = $('#productGripe').text().replace(/ /g, '').replace(/['"]+/g, '').replace(/(\r\n|\n|\r)/gm, "");
 
-            } else if (event === "13,77€") {
+            } else if (event === "13.77") {
 
                 product = $('#productStill').text().replace(/ /g, '').replace(/['"]+/g, '').replace(/(\r\n|\n|\r)/gm, "");
 
@@ -129,7 +129,7 @@
             productId = productId + 1;
             let productAdded = "";
 
-            if (target === 'BIO-OIL OLEO CORPORAL') {
+            if (target === 'BIO-OILOLEOCORPORAL') {
 
                 productAdded = '<li class="cd-cart__product">' +
                     '<div class="cd-cart__image"><a href="#0"><img src="/images/shop/produtos/biooleo.png" alt="placeholder"></a></div><div class="cd-cart__details"><h3 class="truncate"><a href="#0">BIO-OIL OLEO CORPORAL</a></h3>' +
@@ -147,10 +147,10 @@
                     '<option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option>' +
                     '<option value="9">9</option></select><svg class="icon" viewBox="0 0 12 12"><polyline fill="none" stroke="currentColor" points="2,4 6,8 10,4 "/></svg></span></div></div></div></li>';
 
-            } else if (target === 'STILLNOITE TRIPLA AÇÃO') {
+            } else if (target === 'STILLAÇÃONOITE') {
 
                 productAdded = '<li class="cd-cart__product" id="' + target + '">' +
-                    '<div class="cd-cart__image"><a href="#0"><img src="/images/shop/produtos/stillnoite.jpg" alt="placeholder"></a></div><div class="cd-cart__details"><h3 class="truncate"><a href="#0">STILLNOITE TRIPLA AÇÃO</a></h3>' +
+                    '<div class="cd-cart__image"><a href="#0"><img src="/images/shop/produtos/stillnoite.jpg" alt="placeholder"></a></div><div class="cd-cart__details"><h3 class="truncate"><a href="#0">STILL AÇÃO NOITE</a></h3>' +
                     '<span class="cd-cart__price">13,77€</span><div class="cd-cart__actions"><a href="#0" class="cd-cart__delete-item">Delete</a><div class="cd-cart__quantity">' +
                     '<label for="cd-product-' + productId + '">Qty</label><span class="cd-cart__select"><select class="reset" id="cd-product-' + productId + '" name="quantity"><option value="1">1</option>' +
                     '<option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option>' +
@@ -248,3 +248,4 @@
         };
     }
 })();
+

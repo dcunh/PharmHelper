@@ -6,7 +6,6 @@ var logger = require('morgan');
 var produtosRouter = require('./routes/produtosRoutes');
 var servicosRouter = require('./routes/servicosRoutes');
 var localidadeRouter = require('./routes/localidadesRoutes')
-var searchRouter = require('./routes/searchRoutes');
 var comunidadeRouter = require('./routes/comunidadeRoutes')
 var analiseRouter = require('./routes/analiseRoutes')
 var movelRouter = require('./routes/movelRoutes')
@@ -23,7 +22,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/api/produtos', produtosRouter);
 app.use('/api/servicos', servicosRouter);
 app.use('/api/localidades', localidadeRouter)
-app.use('/api/search', searchRouter);
 app.use('/api/servicos/comunidade', comunidadeRouter);
 app.use('/api/servicos/analise', analiseRouter);
 app.use('/api/servicos/movel', movelRouter);

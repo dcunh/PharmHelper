@@ -5,12 +5,12 @@ window.onload = function () {
 
 async function loadMovel() {
     try {
-        let produto = await $.ajax({
+        let servico = await $.ajax({
             url: "/api/servicos/movel",
             method: "get",
             dataType: "json"
         });
-        showMovel(produto);
+        showMovel(servico);
 
     } catch (err) {
         let elemMain = document.getElementById("listarMovel");

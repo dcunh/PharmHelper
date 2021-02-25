@@ -52,7 +52,7 @@ function showProdutos(produtos) {
 // Função para abrir outra pagina 
 function showProduto(idProdutos) {
     sessionStorage.setItem("idProdutos", idProdutos);
-    window.location = "views/produtos/produto.html";
+    window.location = "ProdutoCompra.html";
 
 }
 

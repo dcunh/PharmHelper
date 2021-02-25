@@ -5,12 +5,12 @@ window.onload = function () {
 
 async function loadCovid() {
     try {
-        let produto = await $.ajax({
+        let servico = await $.ajax({
             url: "/api/servicos/covid",
             method: "get",
             dataType: "json"
         });
-        showCovid(produto);
+        showCovid(servico);
 
     } catch (err) {
         let elemMain = document.getElementById("listarCovid");

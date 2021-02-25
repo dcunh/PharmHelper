@@ -5,12 +5,12 @@ window.onload = function () {
 
 async function loadCasa() {
     try {
-        let produto = await $.ajax({
+        let servico = await $.ajax({
             url: "/api/servicos/casa",
             method: "get",
             dataType: "json"
         });
-        showCasa(produto);
+        showCasa(servico);
 
     } catch (err) {
         let elemMain = document.getElementById("listarCasa");
